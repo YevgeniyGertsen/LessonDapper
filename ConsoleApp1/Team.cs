@@ -10,6 +10,6 @@ namespace ConsoleApp1
         public DateTime? FoundingDate { get; set; }
         public int? SportId { get; set; }
         public virtual IEnumerable<Player> Player { get; set; }
-        //public virtual Sport Sport { get; set; }
+        public Sport Sport { get; set; }
     }
 }

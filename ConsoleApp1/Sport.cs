@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace ConsoleApp1
 {
@@ -6,6 +7,6 @@ namespace ConsoleApp1
     {
         public int SportId { get; set; }
         public string Name { get; set; }
-        //public virtual ICollection<Team> Team { get; set; }
+        public ICollection<Team> Teams { get; set; }
     }
 }

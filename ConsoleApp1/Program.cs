@@ -261,10 +261,13 @@ namespace ConsoleApp1
                 var query = "select * from Player where PlayerId = @PlayerId;";
                 var data = con.Query<Player>(query, new { PlayerId = 1 });
 
+                var data3 = con.Query<Sport>("select s.SportId, s.Name from Sport s left join Team t on s.SportId = t.SportId");
+
 
                 //c QueryObject
                 SelectPlayer sp = new SelectPlayer();
                 var data2 = con.Query<Player>(sp.All());
+
             }
         }
     }
